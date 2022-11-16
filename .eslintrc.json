@@ -30,9 +30,6 @@
       "double"
     ],
     "no-duplicate-imports": "error",
-    "no-console": [
-      "warn",
-      { "allow": ["error"] }
-    ]
+    "no-console": "warn"
   }
 }

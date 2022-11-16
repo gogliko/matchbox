@@ -8,7 +8,7 @@ export const ChooserContainer = styled.div`
 	align-items: center;
 	text-align: center;
 	width: 800px;
-	margin: 0 auto;
+	margin: ${({ theme }) => theme.space[7]} auto;
 	font-size: ${({ theme }) => theme.fontSizes.MEDIUM};
 `;
 
@@ -36,8 +36,8 @@ export const CardContainer = styled(NavLink).withConfig({
 		height: 50px;
 		background: white;
 		position: absolute;
-		left: -${({ theme }) => theme.space[0]};
-		top: -${({ theme }) => theme.space[0]};
+		left: -${({ theme }) => theme.space[1]};
+		top: -${({ theme }) => theme.space[1]};
 		z-index: -1;
 		box-shadow: -42px -42px 0px ${({ theme, singlePlayer }) =>
 				singlePlayer ? theme.colors.BLACK : theme.colors.YELLOW} inset;
@@ -46,8 +46,8 @@ export const CardContainer = styled(NavLink).withConfig({
 	&:after {
 		left: auto;
 		top: auto;
-		right: -${({ theme }) => theme.space[0]};
-		bottom: -${({ theme }) => theme.space[0]};
+		right: -${({ theme }) => theme.space[1]};
+		bottom: -${({ theme }) => theme.space[1]};
 		box-shadow: 42px 42px 0
 			${({ theme, singlePlayer }) =>
 				singlePlayer ? theme.colors.BLACK : theme.colors.YELLOW}

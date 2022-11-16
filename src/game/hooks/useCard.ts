@@ -62,6 +62,14 @@ export const useCard = (): UseCard => {
 
 	const flipCard = useCallback(
 		(cardId: number) => {
+			const card = cards.find((card) => card.id === cardId);
+
+			// For security purposes, we are checking if the card is already matched
+			// to don't execute flipcard
+			if (card?.status === CardStatus.MATCHED) {
+				return;
+			}
+
 			// Filter cards to get which ones are opened for later usage
 			const openedCards = cards.filter(
 				(card) => card.status === CardStatus.OPENED

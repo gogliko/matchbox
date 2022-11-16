@@ -6,7 +6,7 @@ interface UsePlayer {
 	/** Game players data */
 	players: Player[];
 	/** Generates players and set player turn */
-	initPlayers: (playerNames: StartGamePlayers) => void;
+	initPlayers: (gamePlayers: StartGamePlayers) => void;
 	/** Increments user points based on playerId */
 	incrementUserPoint: (playerId: number) => void;
 	/** Moves turn to next player */
@@ -24,8 +24,8 @@ export const usePlayer = (): UsePlayer => {
 	const [players, setPlayers] = useState<Player[]>([]);
 	const [currentPlayerIndex, setCurrentPlayerIndex] = useState<number>(0);
 
-	const initPlayers = useCallback((playerNames: StartGamePlayers) => {
-		const playersData = playerNames.map(({ name, type }, index) => ({
+	const initPlayers = useCallback((gamePlayers: StartGamePlayers) => {
+		const playersData = gamePlayers.map(({ name, type }, index) => ({
 			id: index,
 			color: userColors[index],
 			point: 0,

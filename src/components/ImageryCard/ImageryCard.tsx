@@ -26,7 +26,11 @@ const ImageryCard: FC<ImageryCardProps> = ({ card, onCardClick }) => {
 	}, [card.id, cardIsMatched, cardIsOpened, onCardClick]);
 
 	return (
-		<styles.CardWrapper onClick={handleFlipCard} isMatched={cardIsMatched}>
+		<styles.CardWrapper
+			onClick={handleFlipCard}
+			isMatched={cardIsMatched}
+			data-testid="imagery-card"
+		>
 			<styles.CardInnerContainer isOpened={cardIsOpened}>
 				<styles.CardFrontContainer matcherColor={card.matcherColor} />
 				<styles.CardBackContainer>
