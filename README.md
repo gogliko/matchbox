@@ -30,6 +30,7 @@ General structure of all components
 
 ```
  Component // Component folder
+         ├─ __tests__ // Test files.
          ├─ hooks // Contains all related hooks.
          ├─ types // Contains all related types.
          ├─ Component.tsx/ts // Component file.
@@ -41,6 +42,7 @@ Folder structure in the project
 
 ```
 📦 
+├─ __mocks__ // Mock files for testing usage.
 ├─ assets // Includes images and other assets for the project.
 ├─ components // Includes reusable UI components .
 ├─ game // Includes game logic.
@@ -48,6 +50,7 @@ Folder structure in the project
 ├─ hooks // Includes global hooks.
 ├─ pages // Includes pages for the project.
 ├─ styles // Includes global styles for project. 
+├─ test // Test utils folder. 
 └─ utils // Includes global util functions and constants. 
 ```
 
